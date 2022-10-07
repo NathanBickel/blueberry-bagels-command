@@ -24,7 +24,10 @@ public class InputHandler {
      * @param data Command that maps to HashMap
      */
     public void inputEntered(String data) {
-        commands.get(data).execute();
+        if (commands.containsKey(data))
+            System.out.println(commands.get(data).execute());
+        else
+            System.out.println("Invalid command, please enter another command");
     } 
 
 }
