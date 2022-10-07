@@ -1,4 +1,3 @@
-package command;
 
 import java.io.File;
 import java.io.FileWriter;
