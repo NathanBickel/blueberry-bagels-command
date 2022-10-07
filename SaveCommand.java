@@ -1,12 +1,17 @@
-// Jackson Ginn
+/***
+ * @author Jackson
+ */
 
+ /***
+  * A class defining SaveCommand behavior according to Command
+  */
 public class SaveCommand extends Command{
     
-    public void SaveCommand(Document doc){
-
+    public SaveCommand(Document doc){
+        super(doc);
     }
 
     public String execute(){
-
+        return document.save();
     }
 }
