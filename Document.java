@@ -17,11 +17,13 @@ public class Document {
     }
 
     public String append(String line){
-
+        
     }
 
     public String write(String line){
-
+        lines.clear();
+        lines.add(line);
+        return "The line was written to the file";
     }
 
     public String save(){
