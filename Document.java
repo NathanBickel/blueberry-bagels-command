@@ -12,26 +12,34 @@ public class Document {
         
     }
 
+    /**
+     * Returns the lines in this document with a formatted border
+     * @return String The formatted text
+     */
     public String view(){
+        String ret = "";
         //Determine max line length for border
         int len = 8;
         for(String line : lines){
-            // Adds extra 10 spacing for decoration
-            if(line.length() + 10 > len){
-                len = line.length() + 10;
+            // Adds extra 8 spacing for decoration
+            if(line.length() + 8 > len){
+                len = line.length() + 8;
             }
         }
         //Print top border
-        for(int i = 0; i < len; i++)
-            System.out.print("_");
-        System.out.println();
+        for(int i = 0; i < len + 2; i++)
+            ret += "_";
+        ret += "\n\n";
         //Print each line decorated
         for(String line : lines)
-            System.out.println("|    "+line+"    |");
+            //ret += "|    "+line+"    |\n";
+            ret += String.format("|%-"+len+"s|%n", line);
         //Print bottom border
-        for(int i = 0; i < len; i++)
-            System.out.print("_");
-        System.out.println();
+        for(int i = 0; i < len + 2; i++)
+            ret += "_";
+        ret += "\n";
+
+        return ret;
     }
 
     public String append(String line){
