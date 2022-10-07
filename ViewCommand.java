@@ -9,6 +9,6 @@ public class ViewCommand extends Command{
 
     @Override
     public String execute(){
-        return doc.view();
+        return document.view();
     }
 }
