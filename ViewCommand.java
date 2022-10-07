@@ -1,5 +1,7 @@
 
-
+/**
+ * @author Chance Storey
+ */
 public class ViewCommand extends Command{
     public ViewCommand(Document doc){
         super(doc);
@@ -7,6 +9,6 @@ public class ViewCommand extends Command{
 
     @Override
     public String execute(){
-        return null;
+        return document.view();
     }
 }
