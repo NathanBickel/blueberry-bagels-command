@@ -38,6 +38,11 @@ public class Document {
         
     }
 
+    /**
+     * This method will clear the existing file and write the new string
+     * @param line array of lines in the file
+     * @return return message the line was writte
+     */
     public String write(String line){
         lines.clear();
         lines.add(line);
