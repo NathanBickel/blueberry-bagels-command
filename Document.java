@@ -23,25 +23,26 @@ public class Document {
      * @return String The formatted text
      */
     public String view(){
+        final int MARGIN = 10;
         String ret = "";
         //Determine max line length for border
-        int len = 8;
+        int len = MARGIN;
         for(String line : lines){
             // Adds extra 8 spacing for decoration
-            if(line.length() + 8 > len){
-                len = line.length() + 8;
+            if(line.length() + MARGIN > len){
+                len = line.length() + MARGIN;
             }
         }
         //Print top border
-        for(int i = 0; i < len + 2; i++)
+        for(int i = 0; i < len; i++)
             ret += "_";
         ret += "\n\n";
         //Print each line decorated
         for(String line : lines)
             //ret += "|    "+line+"    |\n";
-            ret += String.format("|%-"+len+"s|%n", line);
+            ret += String.format("|    %-"+(len-6)+"s|%n", line);
         //Print bottom border
-        for(int i = 0; i < len + 2; i++)
+        for(int i = 0; i < len; i++)
             ret += "_";
         ret += "\n";
 
