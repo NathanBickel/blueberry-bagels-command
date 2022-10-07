@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 0bfec8c3348c7ab365faa19687528449b63e5b0c
 import java.util.Scanner;
 
 public class DocumentDriver {
