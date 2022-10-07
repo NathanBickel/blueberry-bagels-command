@@ -1,13 +1,15 @@
 import java.util.ArrayList;
 
-// Jackson Ginn
+/***
+ * @author Jackson, Nathan, Kat, Chance, Luna
+ */
 
 public class Document {
     private String fileName;
     private ArrayList<String> lines;
 
     public Document(String name){
-
+        
     }
 
     public String view(){
@@ -23,6 +25,6 @@ public class Document {
     }
 
     public String save(){
-        
+
     }
 }
