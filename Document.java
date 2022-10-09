@@ -49,6 +49,11 @@ public class Document {
         return ret;
     }
 
+    /**
+     * Appends line to the list
+     * @param line line to add to the list
+     * @return return message saying that the line was appended
+     */
     public String append(String line){
         lines.add(line);
         return "The line has been appended to the document";
