@@ -50,7 +50,8 @@ public class Document {
     }
 
     public String append(String line){
-        
+        lines.add(line);
+        return "The line has been appended to the document";
     }
 
     /**
